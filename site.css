@@ -1,0 +1,100 @@
+/* ============================================================================
+   J STAR TECHNOLOGIES — shared site components
+   nav · footer · sections · cards · cta · contact  (loads after jstar.css)
+============================================================================ */
+
+/* ---------- NAV ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(7,10,20,0.72); backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid var(--line);
+}
+.nav-in { max-width: 1200px; margin: 0 auto; display: flex; align-items: center;
+  gap: 28px; padding: 14px 32px; }
+.brand { display: flex; align-items: center; gap: 11px; }
+.brand img { height: 32px; width: auto; }
+.brand .wm { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; line-height: 1; }
+.brand .wm em { font-family: var(--font-mono); font-style: normal; font-size: 9.5px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--tx-3); display: block; margin-top: 3px; }
+.nav-links { display: flex; gap: 4px; margin-left: 14px; }
+.nav-links a { font-size: 13.5px; color: var(--tx-2); font-weight: 500; padding: 8px 12px;
+  border-radius: var(--r-sm); transition: color var(--dur) var(--ease), background var(--dur) var(--ease); white-space: nowrap; }
+.nav-links a:hover { color: var(--tx-1); background: rgba(255,255,255,0.04); }
+.nav-links a.active { color: var(--el-300); }
+.nav-cta { margin-left: auto; display: flex; align-items: center; gap: 14px; }
+.nav-toggle { display: none; }
+
+/* ---------- PAGE HERO (generic, for sub-pages) ---------- */
+.phero { position: relative; overflow: hidden; padding: 92px 0 64px; }
+.phero .glow-a { position: absolute; inset: 0; background: var(--grad-glow); pointer-events: none; }
+.phero .glow-b { position: absolute; inset: 0; background: var(--grad-glow-gold); pointer-events: none; }
+.phero .grid-tex { position: absolute; inset: 0; opacity: 0.5; }
+.phero-in { position: relative; z-index: 2; }
+
+/* ---------- SECTION SCAFFOLD ---------- */
+.section { padding: 88px 0; position: relative; }
+.section.tight { padding: 56px 0; }
+.section.band { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.sec-head { max-width: 720px; margin-bottom: 44px; }
+.sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+.sec-head h2 { font-size: var(--fs-h2); margin: 16px 0 0; }
+.sec-head .lead { font-size: 17px; color: var(--tx-2); margin-top: 16px; line-height: 1.55; }
+
+/* ---------- STAT STRIP ---------- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.stat { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); }
+.stat .n { font-family: var(--font-display); font-size: 34px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+.stat .n .u { font-size: 20px; color: var(--el-300); }
+.stat .l { font-size: 13px; color: var(--tx-3); margin-top: 9px; line-height: 1.4; }
+
+/* ---------- GENERIC CARD ---------- */
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 24px; transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+.card:hover { transform: translateY(-3px); border-color: var(--line-2); }
+
+/* ---------- CTA BAND ---------- */
+.cta-band { position: relative; overflow: hidden; border-radius: var(--r-2xl);
+  background: var(--grad-deep); border: 1px solid var(--line-2); padding: 64px 48px; text-align: center; }
+.cta-band .grid-tex { position: absolute; inset: 0; opacity: 0.4; }
+.cta-band-in { position: relative; z-index: 2; }
+.cta-band h2 { font-size: 42px; }
+.cta-band h2 .dim { color: var(--tx-3); }
+.cta-band p { font-size: 17px; color: var(--tx-2); max-width: 42em; margin: 18px auto 30px; }
+.cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-fine { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.13em; color: var(--tx-3); margin-top: 22px; }
+
+/* ---------- FOOTER ---------- */
+.footer { border-top: 1px solid var(--line); margin-top: 8px; }
+.foot-grid { max-width: 1200px; margin: 0 auto; padding: 56px 32px 28px;
+  display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 36px; }
+.foot-brand .brand { margin-bottom: 16px; }
+.foot-brand p { font-size: 13.5px; color: var(--tx-2); line-height: 1.6; max-width: 30em; }
+.foot-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+.foot-contact a { font-family: var(--font-mono); font-size: 12px; color: var(--tx-2); letter-spacing: 0.02em; }
+.foot-contact a:hover { color: var(--el-300); }
+.foot-col h6 { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--tx-3); margin: 0 0 14px; }
+.foot-col ul { list-style: none; margin: 0; padding: 0; }
+.foot-col li { margin-bottom: 10px; }
+.foot-col a { font-size: 13.5px; color: var(--tx-2); }
+.foot-col a:hover { color: var(--tx-1); }
+.foot-base { max-width: 1200px; margin: 0 auto; padding: 20px 32px 40px;
+  border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  font-family: var(--font-mono); font-size: 11.5px; color: var(--tx-3); letter-spacing: 0.03em; flex-wrap: wrap; }
+.foot-base .glyphs { display: flex; gap: 14px; }
+
+/* ---------- reveal-on-scroll ----------
+   transform-only entrance: opacity stays 1 at all times, so content can
+   NEVER be stuck invisible (even if transitions are throttled or JS fails).
+   The .in class (added by useReveal) slides it up into place.            */
+.reveal { transform: translateY(16px); transition: transform 0.6s var(--ease-out); }
+.reveal.in { transform: none; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 920px) {
+  .nav-links { display: none; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .cta-band h2 { font-size: 32px; }
+}

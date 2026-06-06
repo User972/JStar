@@ -1,0 +1,200 @@
+/* ============================================================================
+   J STAR TECHNOLOGIES — Brand foundations
+   AI-Native Engineering Partner · premium dark-mode marketing surface.
+
+   Built on the Xten Pro design system token set (Space Grotesk display,
+   Inter body, JetBrains Mono labels; soft radii; soft shadows) but re-tuned
+   to the J Star brand: deep navy canvas, electric-blue accent, gold "star".
+============================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('fonts/Inter-Regular.woff2') format('woff2');
+}
+
+:root {
+  /* ---- CANVAS: deep navy-tinted ink ---- */
+  --bg:        #070A14;   /* page */
+  --bg-2:      #0A0E1C;   /* alt section band */
+  --panel:     #0E1426;   /* raised card */
+  --panel-2:   #121A30;   /* nested / hover */
+  --panel-3:   #182241;
+  --line:        rgba(255,255,255,0.085);
+  --line-2:      rgba(255,255,255,0.14);
+  --line-strong: rgba(255,255,255,0.22);
+
+  /* ---- TEXT on dark ---- */
+  --tx-1: #EEF2FB;   /* primary */
+  --tx-2: #AAB4C9;   /* secondary */
+  --tx-3: #707C95;   /* muted / labels */
+  --tx-4: #4A5570;   /* faint */
+
+  /* ---- ELECTRIC BLUE — primary accent (from the logo "J") ---- */
+  --el-50:  #EAF1FF;
+  --el-100: #CFE0FF;
+  --el-200: #A6C4FF;
+  --el-300: #7AA6FF;   /* links / accent text on dark */
+  --el-400: #4F86FF;   /* bright accent */
+  --el-500: #2E63E8;   /* primary */
+  --el-600: #1E49C4;
+  --el-700: #16368C;
+  --el-800: #122A6E;
+  --el-900: #0E1F4F;   /* deep royal navy (logo base) */
+
+  /* ---- GOLD — the "star" highlight (from the apex star) ---- */
+  --gold-100: #FBEAC0;
+  --gold-200: #F6D88C;
+  --gold-300: #F2C963;
+  --gold-400: #E6AE3C;   /* star */
+  --gold-500: #D2941F;
+  --gold-600: #A9760F;
+
+  /* ---- SEMANTIC (muted, dark-surface tuned) ---- */
+  --success:    #34D399;  --success-bg: rgba(52,211,153,0.12);
+  --warning:    #E6AE3C;  --warning-bg: rgba(230,174,60,0.12);
+  --danger:     #F87171;  --danger-bg:  rgba(248,113,113,0.12);
+  --info:       #4F86FF;  --info-bg:    rgba(79,134,255,0.12);
+
+  /* ---- BRAND GRADIENTS ---- */
+  --grad-blue:  linear-gradient(150deg, #5B93FF 0%, #2E63E8 48%, #163A9E 100%);
+  --grad-gold:  linear-gradient(150deg, #F4CB6B 0%, #E6AE3C 45%, #C2851A 100%);
+  --grad-x:     linear-gradient(120deg, #7AA6FF 0%, #4F86FF 40%, #E6AE3C 100%);
+  --grad-glow:  radial-gradient(120% 120% at 82% -12%, rgba(46,99,232,0.30) 0%, rgba(46,99,232,0.0) 55%);
+  --grad-glow-gold: radial-gradient(90% 90% at 12% 0%, rgba(230,174,60,0.14) 0%, transparent 55%);
+  --grad-deep:  radial-gradient(130% 120% at 78% -10%, #14225a 0%, #070A14 56%);
+
+  /* ---- TYPE ---- */
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-display: 4.25rem;
+  --fs-h1:   3rem;
+  --fs-h2:   2.25rem;
+  --fs-h3:   1.625rem;
+  --fs-h4:   1.25rem;
+  --fs-body: 1rem;
+  --fs-sm:   0.875rem;
+  --fs-xs:   0.75rem;
+  --fs-label:0.6875rem;
+
+  --lh-tight: 1.04;
+  --lh-snug:  1.2;
+  --lh-body:  1.62;
+
+  /* ---- RADII ---- */
+  --r-xs: 6px; --r-sm: 8px; --r-md: 12px; --r-lg: 16px;
+  --r-xl: 20px; --r-2xl: 28px; --r-pill: 999px;
+
+  /* ---- ELEVATION (soft) + glows ---- */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.45);
+  --shadow-lg: 0 26px 60px rgba(0,0,0,0.55);
+  --glow-blue: 0 10px 40px rgba(46,99,232,0.45);
+  --glow-gold: 0 10px 34px rgba(214,148,31,0.34);
+
+  /* ---- SPACING (4pt) ---- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px;
+  --sp-12: 48px; --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 200ms;
+}
+
+/* ============================================================================
+   BASE
+============================================================================ */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--tx-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+::selection { background: rgba(79,134,255,0.32); color: #fff; }
+
+h1,h2,h3,h4 { margin: 0; }
+h1 { font-family: var(--font-display); font-size: var(--fs-h1); line-height: var(--lh-tight); font-weight: 600; letter-spacing: -0.025em; }
+h2 { font-family: var(--font-display); font-size: var(--fs-h2); line-height: var(--lh-snug); font-weight: 600; letter-spacing: -0.02em; }
+h3 { font-family: var(--font-display); font-size: var(--fs-h3); line-height: var(--lh-snug); font-weight: 600; letter-spacing: -0.01em; }
+h4 { font-family: var(--font-sans); font-size: var(--fs-h4); line-height: 1.3; font-weight: 700; }
+p  { margin: 0; }
+
+/* ---- shared utility bits ---- */
+.shell { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+.eyebrow {
+  font-family: var(--font-mono); font-size: var(--fs-label); font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--el-300);
+}
+.marker {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--tx-3); display: inline-flex; align-items: center; gap: 8px;
+}
+.marker b { color: var(--el-300); font-weight: 500; }
+.grad-blue-text { background: var(--grad-blue); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad-gold-text { background: var(--grad-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.star-glyph { color: var(--gold-400); }
+
+/* ---- buttons ---- */
+.btn {
+  font-family: var(--font-sans); font-weight: 600; font-size: 14px;
+  padding: 12px 20px; border-radius: var(--r-md); display: inline-flex;
+  align-items: center; gap: 9px; border: 1px solid transparent; cursor: pointer;
+  transition: transform var(--dur) var(--ease), filter var(--dur) var(--ease),
+              background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  white-space: nowrap;
+}
+.btn .arr { transition: transform var(--dur) var(--ease); }
+.btn:hover .arr { transform: translateX(3px); }
+.btn-primary { background: var(--grad-blue); color: #fff; box-shadow: var(--glow-blue); }
+.btn-primary:hover { transform: translateY(-1px); filter: brightness(1.07); }
+.btn-gold { background: var(--grad-gold); color: #2a1c00; box-shadow: var(--glow-gold); }
+.btn-gold:hover { transform: translateY(-1px); filter: brightness(1.05); }
+.btn-ghost { background: rgba(255,255,255,0.04); color: var(--tx-1); border-color: var(--line-2); }
+.btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--line-strong); }
+.btn-lg { padding: 15px 26px; font-size: 15px; }
+
+.link-arrow {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em;
+  color: var(--el-300); display: inline-flex; align-items: center; gap: 6px;
+  transition: gap var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.link-arrow:hover { gap: 10px; color: var(--el-200); }
+
+/* ---- hairline texture helpers ---- */
+.grid-tex {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* ---- chip ---- */
+.chip {
+  display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 6px 11px; border-radius: var(--r-pill); border: 1px solid var(--line-2);
+  color: var(--tx-2); background: rgba(255,255,255,0.025);
+}
+.chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--el-400); box-shadow: 0 0 8px var(--el-400); }
+.chip.gold .dot { background: var(--gold-400); box-shadow: 0 0 8px var(--gold-400); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  html { scroll-behavior: auto; }
+}
